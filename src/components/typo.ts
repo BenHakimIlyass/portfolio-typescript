@@ -39,6 +39,14 @@ const Header3 = css`
   line-height: 2.4rem;
   ${alignement}
 `;
+const Header4 = css`
+  margin: 0 auto;
+  font-size: 1.8rem;
+  max-width: 400px;
+  color: #fff;
+  line-height: 2.2rem;
+  ${alignement}
+`;
 export const P = styled.p`
   ${Paragraph}
 `;
@@ -52,8 +60,14 @@ export const H1 = styled.h1`
   ${Header}
 `;
 export const AnimatedH3 = styled(motion.h3)`
-  ${Header}
+  ${Header3}
 `;
 export const H3 = styled.h3`
   ${Header3}
+`;
+export const AnimatedH4 = styled(motion.h4)`
+  ${Header4}
+`;
+export const H4 = styled.h4`
+  ${Header4}
 `;

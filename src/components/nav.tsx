@@ -13,7 +13,9 @@ const Nav = () => {
       {animate ? (
         <AnimatedH3
           layoutId="logo"
-          style={{ position: "absolute", scale: 0.6 }}
+          animate
+          transition={{ duration: 2, ease: [0.6, 0.05, -0.01, 0.9] }}
+          style={{ position: "absolute", margin: 20 }}
         >
           Ilyass
         </AnimatedH3>
