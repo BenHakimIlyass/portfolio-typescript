@@ -28,7 +28,7 @@ const Header = css`
   max-width: 690px;
   font-weight: 700;
   color: #fff;
-  line-height: 3.8rem;
+  line-height: 4rem;
   ${alignement}
 `;
 const Header3 = css`

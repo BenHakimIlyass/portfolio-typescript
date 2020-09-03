@@ -1,12 +1,12 @@
 import * as React from "react";
 import { GlobalStyle, Container } from "./globalStyles";
-import { H3, AnimatedLogo } from "./components";
+import { H3, AnimatedLogo, Nav } from "./components";
 export default function App() {
   return (
     <div>
       <GlobalStyle />
       <Container>
-        <AnimatedLogo />
+        <Nav />
       </Container>
     </div>
   );
