@@ -13,8 +13,13 @@ const Nav = () => {
       {animate ? (
         <AnimatedH3
           layoutId="logo"
-          animate
-          transition={{ duration: 2, ease: [0.6, 0.05, -0.01, 0.9] }}
+          initial={{ fontSize: 35.2 }}
+          animate={{ fontSize: 28.8 }}
+          transition={{
+            duration: 2,
+            ease: [0.6, 0.09, -0.01, 0.9],
+            type: "spring"
+          }}
           style={{ position: "absolute", margin: 20 }}
         >
           Ilyass

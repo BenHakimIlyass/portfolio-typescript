@@ -1,13 +1,22 @@
 import React from "react";
-export default ({ execute, delay }: { execute?: any; delay: number }) => {
+
+type Obj = { execute: any; delay: number };
+
+export default (props: number | Obj) => {
   const [state, set] = React.useState(false);
   React.useEffect(() => {
-    let timeout = setTimeout(() => {
-      set(false);
-      !!execute && execute();
-    }, delay);
-    return () => clearTimeout(timeout);
+    if (typeof props === "number") {
+      let timeout = setTimeout(() => set(true), props);
+
+      return () => clearTimeout(timeout);
+    }
+    if (typeof props === "object") {
+      const { execute, delay } = props;
+
+      let timeout = setTimeout(() => execute(), delay);
+      return () => clearTimeout(timeout);
+    }
   }, []);
 
-  if (!!!execute) return state;
+  if (typeof props === "number") return state;
 };
