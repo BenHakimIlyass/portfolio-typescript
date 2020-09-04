@@ -10,8 +10,8 @@ const gradient = ({ gradient }: { gradient: string }) =>
     background-image: linear-gradient(${gradient});
   `;
 const alignement = css`
-  text-align: ${({ direction }: { direction?: "left" | "right" }) =>
-    direction ? direction : "center"};
+  text-align: ${({ direction }: { direction?: "center" | "right" }) =>
+    direction ? direction : "left"};
   ${gradient}
 `;
 const Paragraph = css`
@@ -19,7 +19,6 @@ const Paragraph = css`
   color: #fff;
   font-size: 18px;
   ${alignement}
-  max-width: 600px;
   line-height: calc(18px + 18px * 0.4);
 `;
 const Header = css`
@@ -34,7 +33,6 @@ const Header = css`
 const Header3 = css`
   margin: 0 auto;
   font-size: 36px;
-  max-width: 400px;
   color: #fff;
   line-height: calc(36px + 36px * 0.4);
   ${alignement}

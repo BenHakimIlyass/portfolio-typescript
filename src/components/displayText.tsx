@@ -1,20 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
-type Props = {
-  isWhite?: boolean;
-  delay?: number;
-};
-
-const DisplayText = ({ isWhite, delay, ...rest }: Props) => {
+const DisplayText = ({ ...rest }) => {
   return (
     <Playgroud {...rest}>
       <Display
-        initial={{ x: "-100%", opacity: 1 }}
-        animate={{ x: "50%", opacity: 0.4 }}
+        initial={{ x: "-200%", opacity: 0 }}
+        animate={{ x: 0, opacity: 0.4 }}
         transition={{
-          delay: 4.6,
           type: "spring",
           stiffness: 10
         }}

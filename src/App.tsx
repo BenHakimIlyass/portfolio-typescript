@@ -1,6 +1,6 @@
 import * as React from "react";
-import { DisplayText, Nav } from "./components";
-import { GlobalStyle, Container } from "./globalStyles";
+import { FrontendDev, Nav } from "./components";
+import { GlobalStyle } from "./globalStyles";
 import { motion } from "framer-motion";
 
 const App = () => {
@@ -10,10 +10,9 @@ const App = () => {
       animate={{ backgroundColor: "#282A36" }}
     >
       <GlobalStyle />
-      <Container>
-        <Nav />
-        <DisplayText />
-      </Container>
+
+      <Nav />
+      <FrontendDev />
     </motion.div>
   );
 };

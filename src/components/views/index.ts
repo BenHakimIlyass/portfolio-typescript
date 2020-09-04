@@ -1,1 +1,1 @@
-// export { default as AnimatedLogo } from "./animated-logo";
+export { default as FrontendDev } from "./frontendDev";
