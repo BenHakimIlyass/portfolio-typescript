@@ -1,14 +1,21 @@
 import * as React from "react";
-import { GlobalStyle, Container } from "./globalStyles";
 import { DisplayText, Nav } from "./components";
-export default function App() {
+import { GlobalStyle, Container } from "./globalStyles";
+import { motion } from "framer-motion";
+
+const App = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ backgroundColor: "#000" }}
+      animate={{ backgroundColor: "#282A36" }}
+    >
       <GlobalStyle />
       <Container>
         <Nav />
-        {/* <DisplayText /> */}
+        <DisplayText />
       </Container>
-    </div>
+    </motion.div>
   );
-}
+};
+
+export default App;
