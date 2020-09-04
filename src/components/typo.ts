@@ -17,10 +17,10 @@ const alignement = css`
 const Paragraph = css`
   margin: 0 auto;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 18px;
   ${alignement}
   max-width: 600px;
-  line-height: 2rem;
+  line-height: calc(18px + 18px * 0.4);
 `;
 const Header = css`
   margin: 0 auto;
@@ -33,10 +33,10 @@ const Header = css`
 `;
 const Header3 = css`
   margin: 0 auto;
-  font-size: 2.2rem;
+  font-size: 36px;
   max-width: 400px;
   color: #fff;
-  line-height: 2.4rem;
+  line-height: calc(36px + 36px * 0.4);
   ${alignement}
 `;
 const Header4 = css`

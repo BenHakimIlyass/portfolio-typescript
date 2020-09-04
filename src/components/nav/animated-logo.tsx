@@ -8,12 +8,12 @@ export default function AnimatedLogo() {
       <motion.div
         layoutId="logo"
         style={{
-          left: "calc(50% - 100px)",
-          top: "calc(50vh - 80px)",
+          left: "calc(50% - 60px)",
+          top: "calc(50vh - 40px)",
           position: "absolute"
         }}
         transition={{ delay: 1, type: "spring" }}
-        initial={{ x: 5 }}
+        initial={{ x: 8 }}
         animate={{ x: 0 }}
       >
         <AnimatedH3
@@ -26,12 +26,12 @@ export default function AnimatedLogo() {
       </motion.div>
       <motion.div
         style={{
-          left: "calc(50% - 100px)",
+          left: "calc(50% - 60px)",
           position: "absolute",
-          top: "calc(50vh - 80px)"
+          top: "calc(50vh - 40px)"
         }}
         transition={{ delay: 1, type: "spring" }}
-        initial={{ x: -5 }}
+        initial={{ x: -8 }}
         animate={{ x: 0 }}
       >
         <AnimatedH3
