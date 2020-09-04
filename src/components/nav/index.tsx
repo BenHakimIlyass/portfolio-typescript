@@ -18,7 +18,7 @@ const Nav = () => {
             duration: 2,
             ease: [0.6, 0, 0, 1]
           }}
-          style={{ position: "absolute", margin: 20 }}
+          style={{ position: "fixed", margin: 20 }}
         >
           Ilyass
         </AnimatedH4>

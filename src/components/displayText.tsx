@@ -5,11 +5,12 @@ const DisplayText = ({ ...rest }) => {
   return (
     <Playgroud {...rest}>
       <Display
-        initial={{ x: "-200%", opacity: 0 }}
-        animate={{ x: 0, opacity: 0.4 }}
+        initial={{ x: "-120%", opacity: 0 }}
+        animate={{ x: 0, opacity: 0.17 }}
         transition={{
-          type: "spring",
-          stiffness: 10
+          duration: 2.6,
+          stiffness: 10,
+          ease: "easeOut"
         }}
       >
         Frontend developer

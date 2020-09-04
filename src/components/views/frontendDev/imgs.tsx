@@ -2,19 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Imgs = () => (
-  <div style={{ width: 417, height: 400, position: "relative", zIndex: 99 }}>
-    <Hooks delay={0.4} />
-    <Code delay={0.2} />
+const motions = (delay: number) => ({
+  initial: { y: 200, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { delay: delay }
+});
+const Imgs = ({ delay }: { delay: number }) => (
+  <div style={{ width: 517, height: 500, position: "relative", zIndex: 99 }}>
+    <Hooks delay={delay + 0.4} />
+    <Code delay={delay + 0.2} />
   </div>
 );
 const Code = ({ delay }: { delay: number }) => {
   return (
     <motion.svg
       style={{ position: "absolute", top: 120 }}
-      initial={{ y: 200, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: delay }}
+      {...motions(delay)}
       width="100%"
       height="324"
       viewBox="0 0 417 324"
@@ -93,9 +96,7 @@ const Hooks = ({ delay }: { delay: number }) => {
   return (
     <motion.svg
       style={{ position: "absolute" }}
-      initial={{ y: 200, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: delay }}
+      {...motions(delay)}
       width="100%"
       height="144"
       viewBox="0 0 417 144"
