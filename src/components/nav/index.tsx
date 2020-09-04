@@ -7,7 +7,8 @@ import AnimatedLogo from "./animated-logo";
 import { useTimeout } from "../../hooks";
 
 const Nav = () => {
-  const animate = useTimeout(2000);
+  const [animate, set] = React.useState(false);
+  useTimeout({ delay: 2000, execute: () => set(true) });
 
   return (
     <AnimateSharedLayout>

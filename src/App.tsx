@@ -12,7 +12,8 @@ import { GlobalStyle } from "./globalStyles";
 import { motion } from "framer-motion";
 
 const App = () => {
-  const logoAnimationEnds = useTimeout(4000);
+  const [logoAnimationEnds, setanimateLogo] = React.useState(false);
+  useTimeout({ delay: 4000, execute: () => setanimateLogo(true) });
   return (
     <motion.div
       initial={{ backgroundColor: "#000" }}

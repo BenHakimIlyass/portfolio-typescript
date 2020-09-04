@@ -35,7 +35,7 @@ const FrontendDev = () => {
               </AnimatedP>
             </Vstack>
           </div>
-          <div style={{ width: 414, height: "auto" }}>
+          <div style={{ height: "auto" }}>
             <Img delay={1} />
           </div>
         </Hstack>
