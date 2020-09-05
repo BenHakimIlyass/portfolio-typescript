@@ -11,7 +11,7 @@ import {
 } from "../../";
 import Img from "./imgs";
 
-const FrontendDev = () => {
+const Minimalist = () => {
   return (
     <Wrapper>
       <Container>
@@ -27,11 +27,11 @@ const FrontendDev = () => {
                   opacity: 0
                 }}
               >
-                I make clean code for legits online products.
+                I design minimalist and natural digital experiences,
               </AnimatedH3>
               <AnimatedP style={{ zIndex: 1 }}>
-                I build almost perfect interactive web applications, in which
-                every node serves a reason.
+                With manageable software work flow, a team will never get lost
+                nor failed.
               </AnimatedP>
             </Vstack>
           </div>
@@ -42,8 +42,8 @@ const FrontendDev = () => {
       </Container>
       <div style={{ display: "relative", width: "100%" }}>
         <DisplayText
-          style={{ top: 140, left: "30%", zIndex: 0 }}
-          title=" Frontend developer"
+          style={{ top: 140, left: "20%", zIndex: 0 }}
+          title="Minimalist design system"
         />
       </div>
     </Wrapper>
@@ -54,4 +54,4 @@ const Wrapper = styled.div`
   height: 100vh;
   position: relative;
 `;
-export default FrontendDev;
+export default Minimalist;

@@ -1,3 +1,4 @@
+import styled, { css } from "styled-components";
 // utils
 const makeDistance = (coefficient: number) => 500 * coefficient;
 const makeGap = (coefficient: number) => 700 * coefficient;
@@ -17,3 +18,28 @@ export const makeProps = (coefficient: number, max?: number) => ({
   min: makeMin(coefficient),
   max: max ? makeMax(max) : makeMax(coefficient)
 });
+
+interface Metadata {
+  key: string;
+  value: React.CSSProperties;
+}
+interface MetadataObj {
+  [key: string]: Metadata;
+}
+type StyleProps = {
+  [key: string]: React.CSSProperties | MetadataObj;
+};
+export const reponsiveStyleWrapper = (style: StyleProps) => {
+  if (typeof style === "object") {
+    return css`
+      ${Object.keys(style).map((objKey, _) => {
+        //  Wrapp breakpoints
+        return css`
+          @media only screen and (min-width: ${[objKey]}px) {
+            ${css(style[objKey])}
+          }
+        `;
+      })}
+    `;
+  }
+};

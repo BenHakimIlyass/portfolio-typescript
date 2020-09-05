@@ -17,7 +17,7 @@ export default (props: number | Obj) => {
     if (typeof props === "object") {
       const { execute, delay } = props;
 
-      let timeout = setTimeout(() => execute(), delay);
+      let timeout = setTimeout(execute, delay);
       return () => clearTimeout(timeout);
     }
   }, [props]);

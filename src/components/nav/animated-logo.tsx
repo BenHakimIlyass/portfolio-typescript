@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AnimatedLogo() {
   return (
-    <>
+    <div>
       <motion.div
         layoutId="logo"
         style={{
@@ -42,6 +42,6 @@ export default function AnimatedLogo() {
           Ilyass
         </AnimatedH3>
       </motion.div>
-    </>
+    </div>
   );
 }

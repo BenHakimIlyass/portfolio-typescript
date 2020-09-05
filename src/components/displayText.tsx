@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const DisplayText = ({ ...rest }) => {
+const DisplayText = ({
+  title,
+  style
+}: {
+  title: string;
+  style: React.CSSProperties;
+}) => {
   return (
-    <Playgroud {...rest}>
+    <Playgroud style={style}>
       <Display
         initial={{ x: "-120%", opacity: 0 }}
         animate={{ x: 0, opacity: 0.17 }}
@@ -14,14 +20,13 @@ const DisplayText = ({ ...rest }) => {
           ease: "easeOut"
         }}
       >
-        Frontend developer
+        {title}
       </Display>
     </Playgroud>
   );
 };
 const Playgroud = styled.div`
   position: absolute;
-  right: 0;
 `;
 const Display = styled(motion.h1)`
   color: #282a36;

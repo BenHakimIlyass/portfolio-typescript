@@ -1,10 +1,12 @@
 import * as React from "react";
 import {
   FrontendDev,
+  Minimalist,
   Nav,
   ScrollRenderer,
   Container,
-  Vstack
+  Vstack,
+  SocialMedia
 } from "./components";
 import { makeProps } from "./utils";
 import { useTimeout } from "./hooks";
@@ -12,8 +14,7 @@ import { GlobalStyle } from "./globalStyles";
 import { motion } from "framer-motion";
 
 const App = () => {
-  const [logoAnimationEnds, setanimateLogo] = React.useState(false);
-  useTimeout({ delay: 4000, execute: () => setanimateLogo(true) });
+  const logoAnimationEnds = useTimeout(4000);
   return (
     <motion.div
       initial={{ backgroundColor: "#000" }}
@@ -22,13 +23,17 @@ const App = () => {
       <GlobalStyle />
       <Container>
         <Nav />
+        <SocialMedia />
       </Container>
       {logoAnimationEnds && (
-        <ScrollRenderer {...makeProps(0)}>
-          <Vstack top={-10}>
-            <FrontendDev />
-          </Vstack>
-        </ScrollRenderer>
+        <div
+          style={{
+            transform: `translate3d(0,20vh,0)`
+          }}
+        >
+          <FrontendDev />
+          <Minimalist />
+        </div>
       )}
     </motion.div>
   );
