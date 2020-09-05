@@ -1,21 +1,22 @@
-import * as CSS from "csstype";
+import * as React from "react";
 import styled, { css } from "styled-components";
 
 type Props = {
   space: number;
-  style?: any;
-} & Pick<CSS.Properties, "justifyContent" | "alignItems">;
+  style?: React.CSSProperties;
+} & Pick<React.CSSProperties, "justifyContent" | "alignItems">;
 
 const handleAlignement = ({
   justifyContent,
   alignItems,
-  ...style
+  style
 }: Partial<Props>): any =>
   css({
     display: "flex",
     flexWrap: "wrap",
     justifyContent,
-    alignItems
+    alignItems,
+    ...style
   });
 const handleMargins = ({ space }: Partial<Props>): any => css`
   margin: calc(${space}rem / 2 * -1);

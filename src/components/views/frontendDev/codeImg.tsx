@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CodedImg() {
   return (
-    <svg width="489" height="396" viewBox="0 0 489 376" fill="none">
+    <svg width="100%" height="100%" viewBox="0 0 489 376" fill="none">
       <g filter="url(#filter0_d)">
         <rect
           x="40"

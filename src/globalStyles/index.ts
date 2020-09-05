@@ -10,6 +10,9 @@ h1,h2,h3,h4,h5,h6,p{
   margin:0;
 }
 * {
+  ::selection{
+    background-color:#4C4E58;
+  }
   font-family: 'Raleway', sans-serif;
 }
 

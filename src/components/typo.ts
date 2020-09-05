@@ -15,32 +15,26 @@ const alignement = css`
   ${gradient}
 `;
 const Paragraph = css`
-  margin: 0 auto;
   color: #fff;
   font-size: 18px;
   ${alignement}
   line-height: calc(18px + 18px * 0.4);
 `;
 const Header = css`
-  margin: 0 auto;
   font-size: 3.4rem;
-  max-width: 690px;
   font-weight: 700;
   color: #fff;
   line-height: 4rem;
   ${alignement}
 `;
 const Header3 = css`
-  margin: 0 auto;
   font-size: 36px;
   color: #fff;
   line-height: calc(36px + 36px * 0.4);
   ${alignement}
 `;
 const Header4 = css`
-  margin: 0 auto;
-  font-size: 1.8rem;
-  max-width: 400px;
+  font-size: 1.6rem;
   color: #fff;
   line-height: 2.2rem;
   ${alignement}

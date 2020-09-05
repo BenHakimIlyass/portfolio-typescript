@@ -15,8 +15,13 @@ const Minimalist = () => {
   return (
     <Wrapper>
       <Container>
-        <Hstack space={1} alignItems="center" justifyContent="space-around">
-          <div style={{ maxWidth: 500 }}>
+        <Hstack
+          space={1}
+          alignItems="center"
+          justifyContent="space-around"
+          style={{ flexWrap: "nowrap" }}
+        >
+          <div style={{ maxWidth: 500, width: "100%" }}>
             <Vstack space={2}>
               <AnimatedH3
                 style={{ zIndex: 1 }}
@@ -27,15 +32,16 @@ const Minimalist = () => {
                   opacity: 0
                 }}
               >
-                I design minimalist and natural digital experiences,
+                I design minimalist digital experiences, for legit online
+                projects.
               </AnimatedH3>
               <AnimatedP style={{ zIndex: 1 }}>
-                With manageable software work flow, a team will never get lost
-                nor failed.
+                By respecting the UI/UX rules, everyone can make his own perfect
+                product.
               </AnimatedP>
             </Vstack>
           </div>
-          <div style={{ height: "auto" }}>
+          <div>
             <Img delay={1} />
           </div>
         </Hstack>
@@ -51,7 +57,6 @@ const Minimalist = () => {
 };
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
   position: relative;
 `;
 export default Minimalist;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useOnScreen } from "../hooks";
 
 const DisplayText = ({
   title,
@@ -9,19 +10,26 @@ const DisplayText = ({
   title: string;
   style: React.CSSProperties;
 }) => {
+  const [ref, isOnScreen] = useOnScreen();
+
   return (
-    <Playgroud style={style}>
-      <Display
-        initial={{ x: "-120%", opacity: 0 }}
-        animate={{ x: 0, opacity: 0.17 }}
-        transition={{
-          duration: 2.6,
-          stiffness: 10,
-          ease: "easeOut"
-        }}
-      >
-        {title}
-      </Display>
+    <Playgroud style={style} ref={ref}>
+      <AnimatePresence exitBeforeEnter>
+        {isOnScreen && (
+          <Display
+            initial={{ x: "-120%", opacity: 0 }}
+            exit={{ x: "-120%", opacity: 0 }}
+            animate={{ x: 0, opacity: 0.17 }}
+            transition={{
+              duration: 2.6,
+              stiffness: 10,
+              ease: "easeOut"
+            }}
+          >
+            {title}
+          </Display>
+        )}
+      </AnimatePresence>
     </Playgroud>
   );
 };

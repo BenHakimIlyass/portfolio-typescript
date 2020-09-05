@@ -3,12 +3,11 @@ import {
   FrontendDev,
   Minimalist,
   Nav,
-  ScrollRenderer,
-  Container,
   Vstack,
+  Container,
   SocialMedia
 } from "./components";
-import { makeProps } from "./utils";
+import Headroom from "react-headroom";
 import { useTimeout } from "./hooks";
 import { GlobalStyle } from "./globalStyles";
 import { motion } from "framer-motion";
@@ -21,18 +20,21 @@ const App = () => {
       animate={{ backgroundColor: "#282A36" }}
     >
       <GlobalStyle />
-      <Container>
+      <Headroom>
         <Nav />
-        <SocialMedia />
-      </Container>
+      </Headroom>
+      <SocialMedia />
+
       {logoAnimationEnds && (
         <div
           style={{
-            transform: `translate3d(0,20vh,0)`
+            transform: `translate3d(0,10vh,0)`
           }}
         >
-          <FrontendDev />
-          <Minimalist />
+          <Vstack space={4}>
+            <FrontendDev />
+            <Minimalist />
+          </Vstack>
         </div>
       )}
     </motion.div>
