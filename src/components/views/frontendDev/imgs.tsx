@@ -16,7 +16,7 @@ const motions = (delay: number) => ({
 });
 const Imgs = ({ delay }: { delay: number }) => (
   <Wrapper>
-    <motion.div {...motions(delay + 0.2)} style={{ margin: "0 auto" }}>
+    <motion.div {...motions(delay + 0.2)}>
       <HooksImg />
     </motion.div>
     <motion.div {...motions(delay + 0.4)}>
@@ -30,6 +30,6 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 517px;
   min-width: 400px;
-  z-index: 99;
+  z-index: 99 !important;
 `;
 export default Imgs;

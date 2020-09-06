@@ -3,10 +3,8 @@ import styled, { css } from "styled-components";
 type StackAPI = {
   space: number;
   top?: number;
-  splitAfter?: number;
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const spaceGenerator = ({ space, top }: StackAPI) => css`
   display: flex;
   margin-top: ${top}rem;
@@ -16,22 +14,25 @@ const spaceGenerator = ({ space, top }: StackAPI) => css`
     margin-top: ${space}rem !important;
   }
 `;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 
-const splitHandler = ({ splitAfter }: StackAPI): any =>
-  splitAfter &&
-  css`
-    &:only-child {
-      height: 100%;
-    }
-    & > :nth-child(${splitAfter}) {
-      margin-bottom: auto;
-    }
-  `;
+const handleBreakpoints = ({ space, top }: StackAPI) => {
+  if (typeof space === "object") {
+    return css`
+      ${Object.keys(space).map((objKey, _) => {
+        //  Wrapp breakpoints
+        return css`
+          @media only screen and (min-width: ${[objKey]}px) {
+            ${spaceGenerator({ space: space[objKey], top })}
+          }
+        `;
+      })}
+    `;
+  }
+  return spaceGenerator({ space: space, top });
+};
 
 const VStack = styled.div<StackAPI>`
-  ${spaceGenerator}
-  ${splitHandler}
+  ${handleBreakpoints}
 `;
 
 export default VStack;

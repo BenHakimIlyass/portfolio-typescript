@@ -11,14 +11,14 @@ import {
   Hstack,
   Container
 } from "../../";
-import { reponsiveStyleWrapper } from "../../../utils";
+import { breakpoints } from "../../../utils";
 import Img from "./imgs";
 
 const FrontendDev = () => {
   return (
     <Wrapper>
       <Container>
-        <Vstack space={3}>
+        <Vstack space={2}>
           <Cluster space={1} alignItems="center" justifyContent="space-between">
             <div style={{ maxWidth: 500 }}>
               <Vstack space={2}>
@@ -34,8 +34,9 @@ const FrontendDev = () => {
                   I make clean code for legits online products.
                 </AnimatedH3>
                 <AnimatedP style={{ zIndex: 1 }}>
-                  I build almost perfect interactive web applications, in which
-                  every node serves a reason.
+                  Im always working on my skill set, so I can be able to build
+                  such a perfect interactive web applications, in which every
+                  component serves a reason.
                 </AnimatedP>
               </Vstack>
             </div>
@@ -43,8 +44,26 @@ const FrontendDev = () => {
           </Cluster>
           <Vstack space={1}>
             <Devider />
-            <H4 style={{ fontWeight: 500 }}>Projects i've worked on</H4>
-            <P>Projects i've worked on</P>
+            <H4 style={{ fontWeight: 700 }}>Experiences</H4>
+            <P>
+              First i started by writing/learning some javascript in React JS,
+              there were lots of things that just took me quite awhile to figure
+              out, such as state/props concept, one way data flow, managing
+              global state, reusable conponents...
+            </P>
+            <P>
+              But a 8-9 months later, i found myself falling in love with react
+              hooks, redux, Next JS, styled-components, typescript, optimization
+              concepts
+            </P>
+            <P>
+              After that i joined my friends, on a real project{" "}
+              <a href="gfree.co" target="_blanc" style={{ color: "white" }}>
+                Gluten free community
+              </a>
+              , and this was my first experience that gived me the opportunity
+              to discover a lot of new concepts.
+            </P>
           </Vstack>
         </Vstack>
       </Container>
@@ -57,14 +76,15 @@ const FrontendDev = () => {
   );
 };
 const Cluster = styled(Hstack)`
-  ${reponsiveStyleWrapper({
+  ${breakpoints({
     0: { flexWrap: "wrap" },
-    900: { flexWrap: "nowrap" }
+    920: { flexWrap: "nowrap" }
   })}
 `;
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 400px;
+  height: fit-content;
   position: relative;
 `;
 const Devider = styled.div`

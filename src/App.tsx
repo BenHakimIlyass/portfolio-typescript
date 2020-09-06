@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   FrontendDev,
   Minimalist,
+  Contact,
   Nav,
   Vstack,
   Container,
@@ -31,9 +32,10 @@ const App = () => {
             transform: `translate3d(0,10vh,0)`
           }}
         >
-          <Vstack space={4}>
+          <Vstack space={{ 0: 12, 920: 2 }}>
             <FrontendDev />
             <Minimalist />
+            <Contact />
           </Vstack>
         </div>
       )}

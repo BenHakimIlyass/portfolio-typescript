@@ -10,18 +10,14 @@ import {
   Container
 } from "../../";
 import Img from "./imgs";
+import { breakpoints } from "../../../utils";
 
 const Minimalist = () => {
   return (
     <Wrapper>
       <Container>
-        <Hstack
-          space={1}
-          alignItems="center"
-          justifyContent="space-around"
-          style={{ flexWrap: "nowrap" }}
-        >
-          <div style={{ maxWidth: 500, width: "100%" }}>
+        <Cluster space={1} alignItems="center" justifyContent="space-between">
+          <div style={{ maxWidth: 500 }}>
             <Vstack space={2}>
               <AnimatedH3
                 style={{ zIndex: 1 }}
@@ -41,22 +37,28 @@ const Minimalist = () => {
               </AnimatedP>
             </Vstack>
           </div>
-          <div>
-            <Img delay={1} />
-          </div>
-        </Hstack>
+
+          <Img delay={1} />
+        </Cluster>
       </Container>
-      <div style={{ display: "relative", width: "100%" }}>
-        <DisplayText
-          style={{ top: 140, left: "20%", zIndex: 0 }}
-          title="Minimalist design system"
-        />
-      </div>
+      <DisplayText
+        style={{ top: 140, left: "20%", zIndex: 0 }}
+        title="Minimalist design system"
+      />
     </Wrapper>
   );
 };
+const Cluster = styled(Hstack)`
+  ${breakpoints({
+    0: { flexWrap: "wrap" },
+    920: { flexWrap: "nowrap" }
+  })}
+`;
 const Wrapper = styled.div`
   width: 100%;
+  min-height: 400px;
+  height: fit-content;
   position: relative;
 `;
+
 export default Minimalist;
