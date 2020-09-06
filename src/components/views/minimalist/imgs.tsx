@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import DesignSystemImg from "./designSystem";
 import { motion } from "framer-motion";
-import { breakpoints } from "../../../utils";
+
 import { Hstack, Vstack, P } from "../../";
 import { Wallet, Bell, Camera, Cloud } from "./icons";
+
 const motions = (delay: number) => ({
   animate: { y: 60, opacity: 1 },
   initial: { y: 100, opacity: 0 },
@@ -14,6 +14,7 @@ const motions = (delay: number) => ({
     type: "spring"
   }
 });
+
 const Imgs = ({ delay }: { delay: number }) => (
   <Wrapper {...motions(delay + 0.2)}>
     <Vstack space={3}>

@@ -108,10 +108,14 @@ const Wrapper = styled.div`
   left: 0%;
   width: 100%;
   background-image: linear-gradient(
-    360deg,
-    #282a36 9.04%,
-    rgba(40, 42, 54, 0.833333) 45.99%,
-    rgba(40, 42, 54, 0) 100%
+    0deg,
+    #0a0a0c 0%,
+    rgba(10, 10, 12, 0.282717) 59.38%,
+    rgba(10, 10, 12, 0.183781) 68.75%,
+    rgba(10, 10, 12, 0.107444) 79.17%,
+    rgba(10, 10, 12, 0.03125) 92.71%,
+    rgba(10, 10, 12, 0.0133929) 95.31%,
+    rgba(10, 10, 12, 0) 100%
   );
 `;
 const CopyIndicator = styled(motion.div)`

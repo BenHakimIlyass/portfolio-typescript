@@ -15,10 +15,7 @@ import { motion } from "framer-motion";
 const App = () => {
   const logoAnimationEnds = useTimeout(4000);
   return (
-    <motion.div
-      initial={{ backgroundColor: "#000" }}
-      animate={{ backgroundColor: "#282A36" }}
-    >
+    <>
       <GlobalStyle />
       <Headroom>
         <Nav />
@@ -38,7 +35,7 @@ const App = () => {
           </Vstack>
         </div>
       )}
-    </motion.div>
+    </>
   );
 };
 

@@ -1,18 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import {
-  DisplayText,
-  AnimatedH3,
-  H4,
-  P,
-  Center,
-  AnimatedP,
-  Vstack,
-  Hstack,
-  Container
-} from "../../";
-import { breakpoints } from "../../../utils";
+import { AnimatedH3, Center, AnimatedP, Vstack, Container } from "../../";
 
 const Contact = () => {
   return (
@@ -27,12 +15,12 @@ const Contact = () => {
                 animate={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
               >
-                Thank you for your visit, i will be pleased to have an
-                opportunity to work with you.{" "}
+                Thank you for your visit. I will be pleased to have an
+                opportunity to work with you.
               </AnimatedH3>
               <AnimatedP direction="center">
-                I’m always looking for new challenges, so please if you want to
-                be in touch with me, feel free to contact me
+                I’m always looking for new challenges, so if you want to be in
+                touch with me, feel free to contact me.
               </AnimatedP>
               <Center>
                 <a href="/Resume.pdf" target="_blanc">

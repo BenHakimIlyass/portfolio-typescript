@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { AnimateSharedLayout, motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 
 import { AnimatedH4, AnimatedP, Hstack, Container } from "../";
@@ -12,8 +12,8 @@ const Nav = () => {
   return (
     <AnimateSharedLayout>
       {animate ? (
-        <Container>
-          <Wrapper style={{ position: "relative" }}>
+        <Wrapper animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+          <Container>
             <Hstack alignItems="center" justifyContent="space-between">
               <AnimatedH4
                 layoutId="logo"
@@ -27,7 +27,8 @@ const Nav = () => {
               {animate && (
                 <AnimatedP
                   direction="right"
-                  style={{ width: 300 }}
+                  transition={{ delay: 1 }}
+                  style={{ fontSize: 16, width: 200 }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 >
@@ -35,8 +36,8 @@ const Nav = () => {
                 </AnimatedP>
               )}
             </Hstack>
-          </Wrapper>
-        </Container>
+          </Container>
+        </Wrapper>
       ) : (
         <AnimatePresence>
           <AnimatedLogo />
@@ -45,14 +46,18 @@ const Nav = () => {
     </AnimateSharedLayout>
   );
 };
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   height: 100px;
   padding-top: 20px;
   background-image: linear-gradient(
     180deg,
-    #282a36 0%,
-    rgba(40, 42, 54, 0.833333) 40.62%,
-    rgba(40, 42, 54, 0) 100%
+    #0a0a0c 0%,
+    rgba(10, 10, 12, 0.282717) 59.38%,
+    rgba(10, 10, 12, 0.183781) 68.75%,
+    rgba(10, 10, 12, 0.107444) 79.17%,
+    rgba(10, 10, 12, 0.03125) 92.71%,
+    rgba(10, 10, 12, 0.0133929) 95.31%,
+    rgba(10, 10, 12, 0) 100%
   );
 `;
 export default Nav;

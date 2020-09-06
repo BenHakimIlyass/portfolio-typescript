@@ -1,8 +1,8 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 body{
   margin:0;
-  background-color:#282A36;
+  background-color:#12141B;
   overflow-x:hidden;
   height:fit-content;
 }

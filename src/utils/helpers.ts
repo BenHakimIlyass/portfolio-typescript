@@ -1,4 +1,3 @@
-import styled, { css } from "styled-components";
 // utils
 const makeDistance = (coefficient: number) => 500 * coefficient;
 const makeGap = (coefficient: number) => 700 * coefficient;

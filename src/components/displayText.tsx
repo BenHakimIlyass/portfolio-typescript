@@ -37,7 +37,7 @@ const Playgroud = styled.div`
   position: absolute;
 `;
 const Display = styled(motion.h1)`
-  color: #282a36;
+  color: #12141b;
   text-align: right;
   font-size: 7rem;
   white-space: nowrap;
