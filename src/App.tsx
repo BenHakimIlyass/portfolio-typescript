@@ -5,7 +5,6 @@ import {
   Contact,
   Nav,
   Vstack,
-  Container,
   SocialMedia
 } from "./components";
 import Headroom from "react-headroom";
