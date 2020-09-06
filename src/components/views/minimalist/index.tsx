@@ -47,11 +47,11 @@ const Minimalist = () => {
             {/* testimonials */}
             <Vstack space={1}>
               <H4 style={{ fontWeight: 700 }}>Experiences</H4>
-              <P>
+              <P style={{ color: "#CFCFCF" }}>
                 In 2016 I was trying to learn image/video editing, and that was
                 the first step of my design career.{" "}
               </P>
-              <P>
+              <P style={{ color: "#CFCFCF" }}>
                 After a while, a friend of mine told me that Adobe XD and Figma
                 are the best free tools for web design, and here my real web
                 design journey has started.

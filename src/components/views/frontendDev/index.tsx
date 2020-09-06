@@ -51,18 +51,18 @@ const FrontendDev = () => {
             {/* testimonials */}
             <Vstack space={1}>
               <H4 style={{ fontWeight: 700 }}>Experiences</H4>
-              <P>
+              <P style={{ color: "#CFCFCF" }}>
                 First, I started by writing/learning some javascript in React
                 JS, there were lots of things that just took me quite a while to
                 figure out, such as state/props concept, one-way data flow,
                 managing global state, reusable components...
               </P>
-              <P>
+              <P style={{ color: "#CFCFCF" }}>
                 But an 8-9 months later, I found myself falling in love with
                 react hooks, redux, Next JS, styled-components, typescript,
                 optimization concepts.
               </P>
-              <P>
+              <P style={{ color: "#CFCFCF" }}>
                 After that, I joined my friends, on a real project{" "}
                 <a href="gfree.co" target="_blanc" style={{ color: "white" }}>
                   Gluten free community

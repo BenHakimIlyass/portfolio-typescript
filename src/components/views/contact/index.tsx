@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { AnimatedH3, Center, AnimatedP, Vstack, Container } from "../../";
+import { H3, Center, P, Vstack, Container } from "../../";
 
 const Contact = () => {
   return (
@@ -9,7 +9,7 @@ const Contact = () => {
         <Container>
           <div style={{ maxWidth: 860 }}>
             <Vstack space={3}>
-              <AnimatedH3
+              <H3
                 direction="center"
                 style={{ zIndex: 1 }}
                 animate={{ opacity: 1 }}
@@ -17,11 +17,11 @@ const Contact = () => {
               >
                 Thank you for your visit. I will be pleased to have an
                 opportunity to work with you.
-              </AnimatedH3>
-              <AnimatedP direction="center">
+              </H3>
+              <P direction="center" style={{ color: "#CFCFCF" }}>
                 I’m always looking for new challenges, so if you want to be in
                 touch with me, feel free to contact me.
-              </AnimatedP>
+              </P>
               <Center>
                 <a href="/Resume.pdf" target="_blanc">
                   <Button>My resume</Button>
@@ -42,13 +42,13 @@ const Wrapper = styled.div`
 `;
 const Button = styled.button`
   background-color: white;
+  color: #12141b;
   height: 40px;
   border: none;
   width: fit-content;
   padding: 0 16px;
   font-size: 1rem;
   font-weight: 500;
-  color: #102a43;
   cursor: pointer;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);

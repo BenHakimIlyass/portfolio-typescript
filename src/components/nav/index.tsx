@@ -12,7 +12,10 @@ const Nav = () => {
   return (
     <AnimateSharedLayout>
       {animate ? (
-        <Wrapper animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+        <Wrapper
+          animate={{ backgroundImage: gradient(0.65) }}
+          initial={{ backgroundImage: gradient(0) }}
+        >
           <Container>
             <Hstack alignItems="center" justifyContent="space-between">
               <AnimatedH4
@@ -60,4 +63,8 @@ const Wrapper = styled(motion.div)`
     rgba(10, 10, 12, 0) 100%
   );
 `;
+const gradient = (value: number) => `linear-gradient(
+  180deg,
+  rgba(10, 10, 12, ${value}),
+  rgba(10, 10, 12, 0)`;
 export default Nav;
