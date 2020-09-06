@@ -2,12 +2,10 @@ import styled, { css } from "styled-components";
 
 type StackAPI = {
   space: number;
-  top?: number;
 };
 
-const spaceGenerator = ({ space, top }: StackAPI) => css`
+const spaceGenerator = ({ space }: StackAPI) => css`
   display: flex;
-  margin-top: ${top}rem;
   flex-direction: column;
   justify-content: flex-start;
   & > * + * {
@@ -15,20 +13,20 @@ const spaceGenerator = ({ space, top }: StackAPI) => css`
   }
 `;
 
-const handleBreakpoints = ({ space, top }: StackAPI) => {
+const handleBreakpoints = ({ space }: StackAPI) => {
   if (typeof space === "object") {
     return css`
       ${Object.keys(space).map((objKey, _) => {
         //  Wrapp breakpoints
         return css`
           @media only screen and (min-width: ${[objKey]}px) {
-            ${spaceGenerator({ space: space[objKey], top })}
+            ${spaceGenerator({ space: space[objKey] })}
           }
         `;
       })}
     `;
   }
-  return spaceGenerator({ space: space, top });
+  return spaceGenerator({ space: space });
 };
 
 const VStack = styled.div<StackAPI>`

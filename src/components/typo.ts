@@ -16,7 +16,8 @@ const alignement = css`
 `;
 const Paragraph = css`
   color: #fff;
-  font-size: 18px;
+  font-size: 1.1rem;
+  letter-spacing: calc(1.1rem * 0.04);
   ${alignement}
   line-height: calc(18px + 18px * 0.4);
 `;

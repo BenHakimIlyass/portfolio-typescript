@@ -15,37 +15,37 @@ const motions = (delay: number) => ({
   }
 });
 const Imgs = ({ delay }: { delay: number }) => (
-  <Wrapper>
-    <motion.div {...motions(delay + 0.2)}>
-      <Vstack space={3}>
-        <P direction="center">Hover on the icons</P>
-        <Vstack space={2}>
-          <Hstack alignItems="center" space={4} justifyContent="center">
-            <IconHolder>
-              <Bell />
-            </IconHolder>
-            <IconHolder>
-              <Camera />
-            </IconHolder>
-          </Hstack>
-          <Hstack alignItems="center" space={4} justifyContent="center">
-            <IconHolder>
-              <Wallet />
-            </IconHolder>
-            <IconHolder>
-              <Cloud />
-            </IconHolder>
-          </Hstack>
-        </Vstack>
+  <Wrapper {...motions(delay + 0.2)}>
+    <Vstack space={3}>
+      <P direction="center">Hover on the icons</P>
+      <Vstack space={2}>
+        <Hstack alignItems="center" space={4} justifyContent="center">
+          <IconHolder>
+            <Bell />
+          </IconHolder>
+          <IconHolder>
+            <Camera />
+          </IconHolder>
+        </Hstack>
+        <Hstack alignItems="center" space={4} justifyContent="center">
+          <IconHolder>
+            <Wallet />
+          </IconHolder>
+          <IconHolder>
+            <Cloud />
+          </IconHolder>
+        </Hstack>
       </Vstack>
-    </motion.div>
+    </Vstack>
   </Wrapper>
 );
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   margin: 0 auto !important;
   text-align: center;
   width: 100%;
+  height: 500px;
   max-width: 517px;
+  padding-bottom: 40px;
   min-width: 400px;
   z-index: 99;
 `;

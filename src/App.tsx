@@ -32,7 +32,7 @@ const App = () => {
             transform: `translate3d(0,10vh,0)`
           }}
         >
-          <Vstack space={{ 0: 12, 920: 2 }}>
+          <Vstack space={12}>
             <FrontendDev />
             <Minimalist />
             <Contact />

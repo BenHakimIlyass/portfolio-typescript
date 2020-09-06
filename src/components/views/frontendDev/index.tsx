@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+
 import {
   DisplayText,
   AnimatedH3,
@@ -18,18 +19,15 @@ const FrontendDev = () => {
   return (
     <Wrapper>
       <Container>
-        <Vstack space={2}>
-          <Cluster space={1} alignItems="center" justifyContent="space-between">
-            <div style={{ maxWidth: 500 }}>
+        <Vstack space={4}>
+          <Cluster space={2} alignItems="center" justifyContent="space-between">
+            {/* hero texts */}
+            <TextBoundary>
               <Vstack space={2}>
                 <AnimatedH3
                   style={{ zIndex: 1 }}
-                  animate={{
-                    opacity: 1
-                  }}
-                  initial={{
-                    opacity: 0
-                  }}
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
                 >
                   I make clean code for legits online products.
                 </AnimatedH3>
@@ -39,31 +37,36 @@ const FrontendDev = () => {
                   component serves a reason.
                 </AnimatedP>
               </Vstack>
-            </div>
-            <Img delay={1} />
+            </TextBoundary>
+            {/* hero img */}
+
+            {<Img delay={1} />}
           </Cluster>
-          <Vstack space={1}>
+          <Vstack space={2}>
+            {/* testimonials */}
             <Devider />
-            <H4 style={{ fontWeight: 700 }}>Experiences</H4>
-            <P>
-              First i started by writing/learning some javascript in React JS,
-              there were lots of things that just took me quite awhile to figure
-              out, such as state/props concept, one way data flow, managing
-              global state, reusable conponents...
-            </P>
-            <P>
-              But a 8-9 months later, i found myself falling in love with react
-              hooks, redux, Next JS, styled-components, typescript, optimization
-              concepts
-            </P>
-            <P>
-              After that i joined my friends, on a real project{" "}
-              <a href="gfree.co" target="_blanc" style={{ color: "white" }}>
-                Gluten free community
-              </a>
-              , and this was my first experience that gived me the opportunity
-              to discover a lot of new concepts.
-            </P>
+            <Vstack space={1}>
+              <H4 style={{ fontWeight: 700 }}>Experiences</H4>
+              <P>
+                First i started by writing/learning some javascript in React JS,
+                there were lots of things that just took me quite awhile to
+                figure out, such as state/props concept, one way data flow,
+                managing global state, reusable conponents...
+              </P>
+              <P>
+                But a 8-9 months later, i found myself falling in love with
+                react hooks, redux, Next JS, styled-components, typescript,
+                optimization concepts
+              </P>
+              <P>
+                After that i joined my friends, on a real project{" "}
+                <a href="gfree.co" target="_blanc" style={{ color: "white" }}>
+                  Gluten free community
+                </a>
+                , and this was my first experience that gived me the opportunity
+                to discover a lot of new concepts.
+              </P>
+            </Vstack>
           </Vstack>
         </Vstack>
       </Container>
@@ -75,6 +78,11 @@ const FrontendDev = () => {
     </Wrapper>
   );
 };
+const TextBoundary = styled.div`
+  ${breakpoints({
+    920: { maxWidth: 500 }
+  })}
+`;
 const Cluster = styled(Hstack)`
   ${breakpoints({
     0: { flexWrap: "wrap" },

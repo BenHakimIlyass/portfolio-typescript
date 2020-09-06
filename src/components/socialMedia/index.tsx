@@ -107,7 +107,12 @@ const Wrapper = styled.div`
   z-index: 100;
   left: 0%;
   width: 100%;
-  background-image: linear-gradient(0deg, #282a36 0%, rgba(40, 42, 54, 0) 100%);
+  background-image: linear-gradient(
+    360deg,
+    #282a36 9.04%,
+    rgba(40, 42, 54, 0.833333) 45.99%,
+    rgba(40, 42, 54, 0) 100%
+  );
 `;
 const CopyIndicator = styled(motion.div)`
   height: 30px;
